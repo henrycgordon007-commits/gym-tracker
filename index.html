@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gym Tracker</title>
+
+<link rel="manifest" href="manifest.json">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>Gym Tracker</h1>
+</header>
+
+<nav>
+  <button onclick="showTab('workout')">Workout</button>
+  <button onclick="showTab('progress')">Progress</button>
+  <button onclick="showTab('targets')">Targets</button>
+</nav>
+
+<main>
+  <section id="workout" class="tab">
+    <h2>Workout Checklist</h2>
+
+    <h3>Push</h3>
+    <label><input type="checkbox"> Bench Press</label>
+    <label><input type="checkbox"> Incline DB Press</label>
+    <label><input type="checkbox"> Shoulder Press</label>
+
+    <h3>Pull</h3>
+    <label><input type="checkbox"> Pull-Ups</label>
+    <label><input type="checkbox"> Barbell Row</label>
+
+    <h3>Legs</h3>
+    <label><input type="checkbox"> Squat</label>
+    <label><input type="checkbox"> RDL</label>
+  </section>
+
+  <section id="progress" class="tab hidden">
+    <h2>Strength Progress</h2>
+
+    <div class="card">
+      <label>Bench Press (kg)</label>
+      <input type="number" id="bench">
+      <progress id="benchBar" max="100"></progress>
+    </div>
+  </section>
+
+  <section id="targets" class="tab hidden">
+    <h2>Week 8 Targets</h2>
+
+    <ul>
+      <li>Bench: +15–25kg</li>
+      <li>Squat: +25–40kg</li>
+      <li>Row: +20–30kg</li>
+      <li>OHP: +10–15kg</li>
+      <li>Pull-Ups: 10–15 reps</li>
+      <li>Bodyweight: +3–5kg</li>
+    </ul>
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
